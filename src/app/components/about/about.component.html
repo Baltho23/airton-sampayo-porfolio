@@ -1,57 +1,75 @@
-<section id="about" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="section-tag">Sobre mí</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Quién soy</h2>
-      <div class="section-divider"></div>
+<section id="about" class="about-section">
+  <div class="section-container">
+
+    <!-- Encabezado -->
+    <div class="section-header">
+      <p class="section-eyebrow">Perfil</p>
+      <h2 class="section-title">Sobre mí</h2>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-number">2+</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Empresas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">5+</span>
+        <span class="stat-label">Tecnologías</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Certificaciones</span>
+      </div>
+    </div>
+
+    <!-- Grid bio + skills -->
+    <div class="about-grid">
       <!-- Bio -->
-      <div>
-        <p class="text-gray-600 text-lg leading-relaxed mb-6">
-          {{ personal.summary }}
-        </p>
-        <div class="flex flex-col gap-3 mt-8">
-          <div class="info-row">
-            <i class="pi pi-map-marker text-accent"></i>
-            <span class="text-gray-700">{{ personal.location }}</span>
-          </div>
-          <div class="info-row">
-            <i class="pi pi-envelope text-accent"></i>
-            <a [href]="'mailto:' + personal.email" class="text-primary hover:text-mid transition-colors">
-              {{ personal.email }}
-            </a>
-          </div>
-          <div class="info-row">
-            <i class="pi pi-phone text-accent"></i>
-            <span class="text-gray-700">{{ personal.phone }}</span>
-          </div>
-          <div class="info-row">
-            <i class="pi pi-linkedin text-accent"></i>
-            <a [href]="personal.linkedin" target="_blank" rel="noopener" class="text-primary hover:text-mid transition-colors">
-              linkedin.com/in/airton-sampayo
-            </a>
-          </div>
+      <div class="bio-col">
+        <p class="bio-text">{{ personal.summary }}</p>
+
+        <div class="contact-list">
+          <a [href]="'mailto:' + personal.email" class="contact-item">
+            <span class="contact-icon"><i class="pi pi-envelope"></i></span>
+            <span>{{ personal.email }}</span>
+          </a>
+          <a [href]="'tel:' + personal.phone" class="contact-item">
+            <span class="contact-icon"><i class="pi pi-phone"></i></span>
+            <span>{{ personal.phone }}</span>
+          </a>
+          <span class="contact-item">
+            <span class="contact-icon"><i class="pi pi-map-marker"></i></span>
+            <span>{{ personal.location }}</span>
+          </span>
+          <a [href]="personal.linkedin" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon"><i class="pi pi-linkedin"></i></span>
+            <span>linkedin.com/in/airton-sampayo</span>
+          </a>
         </div>
       </div>
 
       <!-- Skills -->
-      <div class="flex flex-col gap-5">
+      <div class="skills-col">
         @for (category of skills; track category.label) {
-          <div class="skill-group">
-            <div class="flex items-center gap-2 mb-3">
-              <i [class]="category.icon + ' text-mid'"></i>
-              <h3 class="font-semibold text-primary text-base">{{ category.label }}</h3>
+          <div class="skill-block">
+            <div class="skill-block-header">
+              <i [class]="category.icon"></i>
+              <span>{{ category.label }}</span>
             </div>
-            <div class="flex flex-wrap gap-2">
+            <div class="chips-wrap">
               @for (skill of category.skills; track skill) {
-                <p-chip [label]="skill" />
+                <span class="skill-chip">{{ skill }}</span>
               }
             </div>
           </div>
         }
       </div>
     </div>
+
   </div>
 </section>

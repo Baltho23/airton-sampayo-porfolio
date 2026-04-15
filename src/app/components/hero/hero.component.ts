@@ -1,12 +1,11 @@
 import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonModule } from 'primeng/button';
 import { RESUME_DATA } from '../../data/resume.data';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, ButtonModule],
+  imports: [CommonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
@@ -59,7 +58,6 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   scrollTo(anchor: string): void {
-    const el = document.getElementById(anchor);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

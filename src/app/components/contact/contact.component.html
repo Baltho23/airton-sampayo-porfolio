@@ -1,85 +1,86 @@
-<section id="contact" class="py-20 bg-white">
-  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="section-tag">Contacto</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Hablemos</h2>
-      <div class="section-divider"></div>
-      <p class="text-gray-500 mt-4 text-base">
-        ¿Tienes un proyecto en mente o quieres conocer más sobre mi trabajo? ¡Escríbeme!
-      </p>
+<section id="contact" class="contact-section">
+  <div class="section-container">
+
+    <div class="section-header">
+      <p class="section-eyebrow">¿Hablamos?</p>
+      <h2 class="section-title">Contacto</h2>
     </div>
 
-    @if (!submitted()) {
-      <form (ngSubmit)="onSubmit()" class="contact-form">
-        <div class="form-group">
-          <label for="contact-name" class="form-label">Nombre</label>
-          <input
-            pInputText
-            id="contact-name"
-            [(ngModel)]="name"
-            name="name"
-            placeholder="Tu nombre completo"
-            class="w-full"
-            required
-          />
-        </div>
+    <div class="contact-grid">
 
-        <div class="form-group">
-          <label for="contact-email" class="form-label">Correo electrónico</label>
-          <input
-            pInputText
-            id="contact-email"
-            [(ngModel)]="email"
-            name="email"
-            type="email"
-            placeholder="tu@email.com"
-            class="w-full"
-            required
-          />
-        </div>
+      <!-- Panel izquierdo -->
+      <div class="contact-panel">
+        <div class="panel-inner">
+          <h3 class="panel-heading">Trabajemos juntos</h3>
+          <p class="panel-sub">
+            Estoy disponible para proyectos freelance, posiciones full-time o simplemente para charlar sobre tecnología.
+          </p>
 
-        <div class="form-group">
-          <label for="contact-message" class="form-label">Mensaje</label>
-          <textarea
-            pTextarea
-            id="contact-message"
-            [(ngModel)]="message"
-            name="message"
-            placeholder="Cuéntame sobre tu proyecto o consulta..."
-            rows="5"
-            class="w-full"
-            required
-          ></textarea>
-        </div>
+          <div class="panel-links">
+            <a [href]="'mailto:' + personal.email" class="panel-link">
+              <span class="link-icon"><i class="pi pi-envelope"></i></span>
+              <div>
+                <span class="link-label">Email</span>
+                <span class="link-value">{{ personal.email }}</span>
+              </div>
+            </a>
+            <a [href]="personal.linkedin" target="_blank" rel="noopener" class="panel-link">
+              <span class="link-icon"><i class="pi pi-linkedin"></i></span>
+              <div>
+                <span class="link-label">LinkedIn</span>
+                <span class="link-value">airton-sampayo</span>
+              </div>
+            </a>
+            <a [href]="'tel:' + personal.phone" class="panel-link">
+              <span class="link-icon"><i class="pi pi-phone"></i></span>
+              <div>
+                <span class="link-label">Teléfono</span>
+                <span class="link-value">{{ personal.phone }}</span>
+              </div>
+            </a>
+          </div>
 
-        <p-button
-          type="submit"
-          label="Enviar mensaje"
-          icon="pi pi-send"
-          class="submit-btn"
-        />
-      </form>
-    } @else {
-      <div class="success-message">
-        <i class="pi pi-check-circle text-5xl text-accent mb-4"></i>
-        <h3 class="text-xl font-bold text-primary">¡Mensaje enviado!</h3>
-        <p class="text-gray-500 mt-2">Gracias por escribirme. Te responderé pronto.</p>
+          <a href="assets/cv.pdf" download="CV-Airton-Sampayo.pdf" class="cv-download-btn">
+            <i class="pi pi-download"></i>
+            Descargar CV
+          </a>
+        </div>
       </div>
-    }
 
-    <div class="flex flex-wrap justify-center gap-4 mt-10">
-      <a [href]="'mailto:' + personal.email" class="direct-link">
-        <i class="pi pi-envelope"></i>{{ personal.email }}
-      </a>
-      <a [href]="personal.linkedin" target="_blank" rel="noopener" class="direct-link">
-        <i class="pi pi-linkedin"></i>LinkedIn
-      </a>
+      <!-- Formulario -->
+      <div class="form-panel">
+        @if (!submitted()) {
+          <form (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Nombre</label>
+              <input pInputText [(ngModel)]="name" name="name" placeholder="Tu nombre" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo electrónico</label>
+              <input pInputText [(ngModel)]="email" name="email" type="email" placeholder="tu@email.com" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mensaje</label>
+              <textarea pTextarea [(ngModel)]="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." class="form-input" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="pi pi-send"></i>
+              Enviar mensaje
+            </button>
+          </form>
+        } @else {
+          <div class="success-box">
+            <div class="success-icon"><i class="pi pi-check"></i></div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por escribirme. Te responderé a la brevedad.</p>
+          </div>
+        }
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer class="py-6 text-center" style="background: linear-gradient(135deg, #522566, #3a1a4a);">
-  <p class="text-white/60 text-sm">
-    © 2025 Airton Jairo Sampayo Solano — Bogotá, Colombia
-  </p>
+<footer class="site-footer">
+  <p>© 2025 Airton Jairo Sampayo Solano · Bogotá, Colombia</p>
 </footer>

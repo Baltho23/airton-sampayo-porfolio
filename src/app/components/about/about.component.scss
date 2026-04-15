@@ -1,48 +1,182 @@
-.section-tag {
-  display: inline-block;
-  padding: 0.3rem 1rem;
-  border-radius: 9999px;
-  background: rgba(173, 116, 195, 0.15);
-  color: #7A3A8E;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.about-section {
+  background: #ffffff;
+  padding: 6rem 0;
+}
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Header ── */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: #AD74C3;
+  margin: 0 0 0.6rem;
 }
 
-.section-divider {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
-  border-radius: 2px;
-  margin: 1rem auto 0;
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #522566;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
-.info-row {
+/* ── Stats ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #522566 0%, #3a1a4a 100%);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  text-align: center;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-}
-
-.skill-group {
-  background: #F8EDFB;
-  border: 1px solid #EADFF0;
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-  transition: box-shadow 0.2s;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(82, 37, 102, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(82,37,102,0.25);
   }
 }
 
-:host ::ng-deep {
-  .p-chip {
-    background: #522566 !important;
-    color: white !important;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border-radius: 9999px;
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #AD74C3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+/* ── Grid ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ── Bio ── */
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0 0 2rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover { color: #522566; }
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #F8EDFB;
+  border: 1px solid #EADFF0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i { color: #7A3A8E; font-size: 0.85rem; }
+}
+
+/* ── Skills ── */
+.skills-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-block {
+  background: #F8EDFB;
+  border: 1px solid #EADFF0;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(82,37,102,0.1);
+    transform: translateY(-1px);
+  }
+}
+
+.skill-block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7A3A8E;
+
+  i { font-size: 0.85rem; }
+}
+
+.chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: white;
+  border: 1px solid #EADFF0;
+  color: #522566;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #522566;
+    color: white;
+    border-color: #522566;
   }
 }

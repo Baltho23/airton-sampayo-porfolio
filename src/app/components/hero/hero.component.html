@@ -1,77 +1,57 @@
 <section
   id="hero"
-  class="relative min-h-screen flex items-center justify-center overflow-hidden"
-  style="background: linear-gradient(135deg, #522566 0%, #3a1a4a 55%, #2a1038 100%);"
+  class="hero-section"
 >
-  <!-- Fondo decorativo -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="grid-bg"></div>
+  <!-- Fondo: grilla + blobs -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="grid-overlay"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
   </div>
 
-  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
+  <div class="hero-content">
 
-    <!-- Nombre -->
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+    <!-- Badge disponibilidad -->
+    <div class="available-badge">
+      <span class="available-dot"></span>
+      Disponible para nuevas oportunidades
+    </div>
+
+    <!-- Nombre con gradiente -->
+    <h1 class="hero-title">
       {{ personal.name }}
     </h1>
 
     <!-- Typewriter -->
-    <div class="h-10 flex items-center justify-center mb-8">
-      <p class="text-lg sm:text-xl font-semibold typewriter-line">
-        {{ typewriterText() }}<span class="typewriter-cursor">|</span>
-      </p>
+    <div class="typewriter-wrap">
+      <span class="typewriter-text">{{ typewriterText() }}</span><span class="cursor">|</span>
     </div>
 
     <!-- Chips de contacto -->
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-      <a [href]="'mailto:' + personal.email" class="contact-chip" title="Email">
+    <div class="contact-row">
+      <a [href]="'mailto:' + personal.email" class="chip">
         <i class="pi pi-envelope"></i>
-        <span class="hidden sm:inline">{{ personal.email }}</span>
+        <span>{{ personal.email }}</span>
       </a>
-      <a [href]="personal.linkedin" target="_blank" rel="noopener noreferrer" class="contact-chip" title="LinkedIn">
+      <a [href]="personal.linkedin" target="_blank" rel="noopener" class="chip">
         <i class="pi pi-linkedin"></i>
-        <span class="hidden sm:inline">LinkedIn</span>
+        <span>LinkedIn</span>
       </a>
-      <a [href]="'tel:' + personal.phone" class="contact-chip" title="Teléfono">
+      <a [href]="'tel:' + personal.phone" class="chip">
         <i class="pi pi-phone"></i>
-        <span class="hidden sm:inline">{{ personal.phone }}</span>
+        <span>{{ personal.phone }}</span>
       </a>
-      <span class="contact-chip">
+      <span class="chip">
         <i class="pi pi-map-marker"></i>
-        <span class="hidden sm:inline">{{ personal.location }}</span>
+        <span>{{ personal.location }}</span>
       </span>
     </div>
 
-    <!-- CTAs -->
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="assets/cv.pdf" download="CV-Airton-Sampayo.pdf">
-        <p-button
-          label="Descargar CV"
-          icon="pi pi-download"
-          severity="secondary"
-          [outlined]="true"
-          styleClass="hero-btn-outlined"
-        />
-      </a>
-      <p-button
-        label="Ver proyectos"
-        icon="pi pi-arrow-down"
-        (onClick)="scrollTo('projects')"
-        styleClass="hero-btn-primary"
-      />
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="mt-16 flex justify-center">
-      <button
-        (click)="scrollTo('about')"
-        class="scroll-indicator bg-transparent border-0 cursor-pointer"
-        aria-label="Ir a Sobre mí"
-      >
-        <i class="pi pi-chevron-down text-white/40 text-2xl animate-bounce"></i>
-      </button>
-    </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <button class="scroll-btn" (click)="scrollTo('about')" aria-label="Bajar">
+    <i class="pi pi-angle-down"></i>
+  </button>
 </section>

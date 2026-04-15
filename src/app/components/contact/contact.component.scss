@@ -1,28 +1,153 @@
-.section-tag {
-  display: inline-block;
-  padding: 0.3rem 1rem;
-  border-radius: 9999px;
-  background: rgba(173, 116, 195, 0.15);
-  color: #7A3A8E;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.contact-section {
+  background: #F8EDFB;
+  padding: 6rem 0;
+}
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #AD74C3;
+  margin: 0 0 0.6rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #522566;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* ── Grid ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+/* ── Panel izquierdo ── */
+.contact-panel {
+  position: sticky;
+  top: 80px;
+}
+
+.panel-inner {
+  background: linear-gradient(145deg, #522566 0%, #3a1a4a 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-heading {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
+.panel-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.panel-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panel-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 0.8; }
+
+  div { display: flex; flex-direction: column; gap: 1px; }
+}
+
+.link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(173,116,195,0.2);
+  border: 1px solid rgba(173,116,195,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i { color: #AD74C3; font-size: 0.9rem; }
+}
+
+.link-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.section-divider {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
-  border-radius: 2px;
-  margin: 1rem auto 0;
+.link-value {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.cv-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(173,116,195,0.4);
+  color: #EADFF0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(173,116,195,0.15);
+    border-color: #AD74C3;
+    color: white;
+  }
+
+  i { font-size: 0.8rem; }
+}
+
+/* ── Formulario ── */
+.form-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #EADFF0;
 }
 
 .contact-form {
-  background: #F8EDFB;
-  border: 1px solid #EADFF0;
-  border-radius: 16px;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -35,70 +160,89 @@
 }
 
 .form-label {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: #374151;
-}
-
-.success-message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  background: rgba(173, 116, 195, 0.08);
-  border: 1px solid #EADFF0;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.direct-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #522566;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #EADFF0;
-  transition: all 0.2s;
-
-  &:hover {
-    background: rgba(82, 37, 102, 0.06);
-    border-color: #AD74C3;
-    color: #7A3A8E;
-  }
+  letter-spacing: 0.02em;
 }
 
 :host ::ng-deep {
-  .p-inputtext,
-  textarea.p-inputtextarea {
-    border-radius: 8px;
-    border-color: #EADFF0;
-    background: white;
+  .form-input.p-inputtext,
+  textarea.form-input {
+    border-radius: 10px;
+    border: 1.5px solid #EADFF0;
+    padding: 0.65rem 0.9rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    width: 100%;
     transition: border-color 0.2s, box-shadow 0.2s;
 
     &:focus {
       border-color: #7A3A8E;
-      box-shadow: 0 0 0 3px rgba(122, 58, 142, 0.12);
+      box-shadow: 0 0 0 3px rgba(122,58,142,0.1);
+      outline: none;
     }
   }
+}
 
-  .submit-btn .p-button {
-    background: #522566;
-    border-color: #522566;
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    padding: 0.75rem 1.5rem;
-    width: 100%;
-    justify-content: center;
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #522566, #7A3A8E);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  font-family: inherit;
 
-    &:hover {
-      background: #3f1a50;
-      border-color: #3f1a50;
-    }
+  &:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  i { font-size: 0.85rem; }
+}
+
+/* ── Success ── */
+.success-box {
+  text-align: center;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+
+  h3 { font-size: 1.2rem; font-weight: 700; color: #522566; margin: 0; }
+  p  { color: #6b7280; font-size: 0.9rem; margin: 0; }
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #522566, #AD74C3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i { color: white; font-size: 1.5rem; }
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: linear-gradient(135deg, #2a1038, #522566);
+  padding: 1.5rem;
+  text-align: center;
+
+  p {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    margin: 0;
   }
 }

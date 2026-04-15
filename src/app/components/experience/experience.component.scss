@@ -1,66 +1,176 @@
-.section-tag {
-  display: inline-block;
-  padding: 0.3rem 1rem;
-  border-radius: 9999px;
-  background: rgba(173, 116, 195, 0.15);
-  color: #7A3A8E;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.exp-section {
+  background: #F8EDFB;
+  padding: 6rem 0;
+}
+
+.section-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: #AD74C3;
+  margin: 0 0 0.6rem;
 }
 
-.section-divider {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
-  border-radius: 2px;
-  margin: 1rem auto 0;
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #522566;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
-.timeline-marker {
-  width: 40px;
-  height: 40px;
+/* ── Timeline ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* ── Spine ── */
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.node {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
   color: white;
-  font-size: 0.95rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 
-  &.marker-success {
-    background: #522566;
-    box-shadow: 0 0 0 4px #F8EDFB, 0 0 0 6px #522566;
-  }
-  &.marker-info {
-    background: #7A3A8E;
-    box-shadow: 0 0 0 4px #F8EDFB, 0 0 0 6px #7A3A8E;
-  }
-  &.marker-warn {
-    background: #AD74C3;
-    box-shadow: 0 0 0 4px #F8EDFB, 0 0 0 6px #AD74C3;
-  }
+  &.node-0 { background: linear-gradient(135deg, #522566, #7A3A8E); box-shadow: 0 4px 16px rgba(82,37,102,0.4); }
+  &.node-1 { background: linear-gradient(135deg, #7A3A8E, #AD74C3); box-shadow: 0 4px 16px rgba(122,58,142,0.35); }
+  &.node-2 { background: linear-gradient(135deg, #AD74C3, #EADFF0); box-shadow: 0 4px 16px rgba(173,116,195,0.3);
+              color: #522566; }
 }
 
-.experience-card {
+.spine-line {
+  width: 2px;
+  flex: 1;
+  min-height: 2rem;
+  background: linear-gradient(180deg, #EADFF0, transparent);
+  margin: 4px 0;
+}
+
+/* ── Card ── */
+.exp-card {
   background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  flex: 1;
   border: 1px solid #EADFF0;
-  border-radius: 14px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 1rem;
-  box-shadow: 0 2px 12px rgba(82, 37, 102, 0.06);
-  transition: box-shadow 0.2s, transform 0.2s;
+  border-left: 4px solid transparent;
+  transition: box-shadow 0.25s, transform 0.25s;
+
+  &.card-0 { border-left-color: #522566; }
+  &.card-1 { border-left-color: #7A3A8E; }
+  &.card-2 { border-left-color: #AD74C3; }
 
   &:hover {
-    box-shadow: 0 6px 24px rgba(82, 37, 102, 0.13);
-    transform: translateY(-2px);
+    box-shadow: 0 10px 36px rgba(82,37,102,0.12);
+    transform: translateX(4px);
   }
 }
 
-:host ::ng-deep {
-  .experience-timeline .p-timeline-event-connector {
-    background: #EADFF0;
-    width: 2px;
-  }
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 2px;
+}
+
+.company {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7A3A8E;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.period, .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+
+  i { font-size: 0.7rem; }
+}
+
+/* ── Bullets ── */
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.bullet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #AD74C3;
+  flex-shrink: 0;
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 480px) {
+  .meta { align-items: flex-start; }
+  .card-top { flex-direction: column; }
 }

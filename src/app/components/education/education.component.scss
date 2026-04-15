@@ -1,75 +1,164 @@
-.section-tag {
-  display: inline-block;
-  padding: 0.3rem 1rem;
-  border-radius: 9999px;
-  background: rgba(173, 116, 195, 0.15);
-  color: #7A3A8E;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.edu-section {
+  background: white;
+  padding: 6rem 0;
+}
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: #AD74C3;
+  margin: 0 0 0.6rem;
 }
 
-.section-divider {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
-  border-radius: 2px;
-  margin: 1rem auto 0;
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #522566;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
-.edu-card {
+/* ── Grid ── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+/* ── Universidad ── */
+.uni-card {
+  background: linear-gradient(145deg, #522566 0%, #3a1a4a 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
   display: flex;
+  gap: 1.5rem;
   align-items: flex-start;
-  gap: 1.25rem;
-  background: linear-gradient(135deg, #522566 0%, #3a1a4a 100%);
-  border-radius: 16px;
-  padding: 1.75rem 2rem;
-  box-shadow: 0 8px 32px rgba(82, 37, 102, 0.3);
+  box-shadow: 0 12px 40px rgba(82,37,102,0.3);
 }
 
-.edu-icon-wrap {
+.uni-icon {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: rgba(173, 116, 195, 0.2);
-  border: 1px solid rgba(173, 116, 195, 0.35);
+  background: rgba(173,116,195,0.2);
+  border: 1px solid rgba(173,116,195,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
-  i {
-    color: #AD74C3;
-    font-size: 1.5rem;
-  }
+  i { color: #AD74C3; font-size: 1.4rem; }
+}
+
+.uni-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 6px;
+}
+
+.uni-degree {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 4px;
+}
+
+.uni-inst {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #AD74C3;
+  margin: 0 0 10px;
+}
+
+.uni-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+
+  i { font-size: 0.7rem; }
+}
+
+/* ── Certs ── */
+.certs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.certs-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #AD74C3;
+  margin: 0 0 0.25rem;
 }
 
 .cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   background: #F8EDFB;
   border: 1px solid #EADFF0;
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(82, 37, 102, 0.1);
-    transform: translateY(-2px);
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px rgba(82,37,102,0.1);
   }
 }
 
-.cert-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: rgba(82, 37, 102, 0.1);
+.cert-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #EADFF0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
-  i {
-    color: #522566;
-    font-size: 0.9rem;
-  }
+  i { color: #7A3A8E; font-size: 1rem; }
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cert-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.cert-meta {
+  font-size: 0.78rem;
+  color: #9ca3af;
 }

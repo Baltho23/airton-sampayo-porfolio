@@ -1,10 +1,214 @@
-nav {
-  background: transparent;
+/* ── Host ── */
+:host {
+  display: block;
+}
 
-  &.scrolled {
-    background: rgba(82, 37, 102, 0.92);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 1px 24px rgba(82, 37, 102, 0.35);
+/* ── Header ── */
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(82, 37, 102, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(173, 116, 195, 0.2);
+  transition: box-shadow 0.3s;
+
+  &.elevated {
+    box-shadow: 0 4px 24px rgba(42, 16, 56, 0.45);
   }
+}
+
+/* ── Contenedor ── */
+.navbar-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ── Marca ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.brand-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #AD74C3, #7A3A8E);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Nav desktop ── */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    color: white;
+    background: rgba(173, 116, 195, 0.12);
+  }
+
+  &--active {
+    color: white;
+    font-weight: 600;
+    background: rgba(173, 116, 195, 0.15);
+  }
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 2px;
+  border-radius: 1px;
+  background: #AD74C3;
+  display: block;
+}
+
+/* ── CV link ── */
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(173, 116, 195, 0.5);
+  color: #EADFF0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+
+  i { font-size: 0.72rem; }
+
+  &:hover {
+    background: rgba(173, 116, 195, 0.18);
+    border-color: #AD74C3;
+    color: white;
+  }
+}
+
+/* ── Hamburguesa ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  flex-shrink: 0;
+
+  &:hover { background: rgba(173, 116, 195, 0.15); }
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+
+  &--open-1 { transform: translateY(7px) rotate(45deg); }
+  &--open-2 { opacity: 0; }
+  &--open-3 { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* ── Menú móvil ── */
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  background: rgba(58, 26, 74, 0.98);
+  border-top: 1px solid rgba(173, 116, 195, 0.1);
+  transition: max-height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  &--open { max-height: 400px; padding: 8px 1rem 14px; }
+}
+
+.mobile-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+
+  &:hover { background: rgba(173, 116, 195, 0.12); color: white; }
+  &--active { color: #EADFF0; font-weight: 600; background: rgba(173, 116, 195, 0.1); }
+}
+
+.mobile-cv {
+  margin-top: 8px;
+  border-color: rgba(173, 116, 195, 0.35);
+}
+
+/* ── Responsive ── */
+.desktop-only { display: inline-flex; }
+.mobile-only  { display: none; }
+
+@media (max-width: 767px) {
+  .desktop-nav  { display: none; }
+  .desktop-only { display: none; }
+  .mobile-only  { display: flex; }
 }

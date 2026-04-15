@@ -1,0 +1,63 @@
+.section-tag {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 9999px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-divider {
+  width: 50px;
+  height: 3px;
+  background: #f97316;
+  border-radius: 2px;
+  margin: 1rem auto 0;
+}
+
+.timeline-marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px currentColor;
+
+  &.marker-success { background: #22c55e; box-shadow: 0 0 0 4px #f0fdf4, 0 0 0 6px #22c55e; }
+  &.marker-info    { background: #3b82f6; box-shadow: 0 0 0 4px #eff6ff, 0 0 0 6px #3b82f6; }
+  &.marker-warn    { background: #f97316; box-shadow: 0 0 0 4px #fff7ed, 0 0 0 6px #f97316; }
+}
+
+.experience-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    box-shadow: 0 6px 24px rgba(30, 58, 95, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+:host ::ng-deep {
+  .experience-timeline .p-timeline-event-connector {
+    background: #e2e8f0;
+    width: 2px;
+  }
+
+  .period-tag .p-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}

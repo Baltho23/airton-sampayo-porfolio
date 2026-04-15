@@ -1,0 +1,64 @@
+<nav
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  [class.scrolled]="scrolled()"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo / Iniciales -->
+      <button
+        (click)="scrollTo('hero')"
+        class="flex items-center gap-3 group cursor-pointer bg-transparent border-0"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm select-none"
+        >
+          AJS
+        </span>
+        <span class="hidden sm:block text-white font-semibold text-sm tracking-wide group-hover:text-accent transition-colors">
+          Airton Sampayo
+        </span>
+      </button>
+
+      <!-- Links desktop -->
+      <ul class="hidden md:flex items-center gap-1">
+        @for (link of links; track link.anchor) {
+          <li>
+            <button
+              (click)="scrollTo(link.anchor)"
+              class="px-3 py-2 text-sm text-white/80 hover:text-accent font-medium rounded-lg hover:bg-white/5 transition-all duration-200 cursor-pointer bg-transparent border-0"
+            >
+              {{ link.label }}
+            </button>
+          </li>
+        }
+      </ul>
+
+      <!-- Botón hamburguesa móvil -->
+      <button
+        class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition bg-transparent border-0 cursor-pointer"
+        (click)="toggleMenu()"
+        aria-label="Menú"
+      >
+        <i class="text-xl" [class]="menuOpen() ? 'pi pi-times' : 'pi pi-bars'"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  @if (menuOpen()) {
+    <div class="md:hidden bg-primary/95 backdrop-blur-md border-t border-white/10">
+      <ul class="flex flex-col px-4 py-3 gap-1">
+        @for (link of links; track link.anchor) {
+          <li>
+            <button
+              (click)="scrollTo(link.anchor)"
+              class="w-full text-left px-4 py-3 text-white/80 hover:text-accent font-medium rounded-lg hover:bg-white/5 transition-all duration-200 bg-transparent border-0 cursor-pointer"
+            >
+              {{ link.label }}
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</nav>

@@ -1,0 +1,59 @@
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Encabezado de sección -->
+    <div class="text-center mb-14">
+      <span class="section-tag">Sobre mí</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Quién soy</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Columna izquierda: Bio -->
+      <div>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          {{ personal.summary }}
+        </p>
+
+        <div class="flex flex-col gap-3 mt-8">
+          <div class="info-row">
+            <i class="pi pi-map-marker text-accent"></i>
+            <span class="text-gray-700">{{ personal.location }}</span>
+          </div>
+          <div class="info-row">
+            <i class="pi pi-envelope text-accent"></i>
+            <a [href]="'mailto:' + personal.email" class="text-primary hover:text-accent transition-colors">
+              {{ personal.email }}
+            </a>
+          </div>
+          <div class="info-row">
+            <i class="pi pi-phone text-accent"></i>
+            <span class="text-gray-700">{{ personal.phone }}</span>
+          </div>
+          <div class="info-row">
+            <i class="pi pi-linkedin text-accent"></i>
+            <a [href]="personal.linkedin" target="_blank" rel="noopener" class="text-primary hover:text-accent transition-colors">
+              linkedin.com/in/airton-sampayo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: Skills agrupadas -->
+      <div class="flex flex-col gap-6">
+        @for (category of skills; track category.label) {
+          <div class="skill-group">
+            <div class="flex items-center gap-2 mb-3">
+              <i [class]="category.icon + ' text-accent'"></i>
+              <h3 class="font-semibold text-primary text-base">{{ category.label }}</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              @for (skill of category.skills; track skill) {
+                <p-chip [label]="skill" styleClass="skill-chip" />
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

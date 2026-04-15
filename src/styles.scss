@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+/* Orden de capas: Tailwind base < PrimeNG < Tailwind utilities */
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@tailwind components;
+
+@layer tailwind-utilities {
+  @tailwind utilities;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── Sobrescritura de tokens CSS de PrimeNG con nuestra paleta ─── */
+:root {
+  --primary-color: #1e3a5f;
+  --primary-color-text: #ffffff;
+  --accent-color: #f97316;
+
+  /* Botones primarios */
+  --p-button-primary-background: #1e3a5f;
+  --p-button-primary-hover-background: #16304f;
+  --p-button-primary-border-color: #1e3a5f;
+  --p-button-primary-hover-border-color: #16304f;
+  --p-button-primary-color: #ffffff;
+
+  /* Botones outlined */
+  --p-button-outlined-primary-color: #1e3a5f;
+  --p-button-outlined-primary-border-color: #1e3a5f;
+  --p-button-outlined-primary-hover-background: rgba(30, 58, 95, 0.08);
+
+  /* Inputs */
+  --p-inputtext-focus-border-color: #1e3a5f;
+
+  /* Smooth scroll */
+  scroll-behavior: smooth;
+}
+
+/* ─── Estilos globales ─── */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scroll suave nativo */
+html {
+  scroll-behavior: smooth;
+}

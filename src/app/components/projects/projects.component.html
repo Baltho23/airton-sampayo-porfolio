@@ -1,43 +1,37 @@
-<section id="projects" class="py-20 bg-slate-50">
+<section id="projects" class="py-20 bg-lightest">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
     <div class="text-center mb-14">
       <span class="section-tag">Portafolio</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Proyectos</h2>
       <div class="section-divider"></div>
     </div>
 
-    <!-- Grid de proyectos -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (project of projects; track project.name) {
         <div class="project-card">
-          <!-- Header de la card -->
           <div class="project-card-header">
             <div class="project-icon">
               <i class="pi pi-code text-white text-2xl"></i>
             </div>
           </div>
 
-          <!-- Contenido -->
           <div class="p-5 flex flex-col flex-1">
             <h3 class="text-lg font-bold text-primary mb-2">{{ project.name }}</h3>
             <p class="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{{ project.description }}</p>
 
-            <!-- Stack -->
             <div class="flex flex-wrap gap-1.5 mb-5">
               @for (tech of project.stack; track tech) {
-                <p-tag [value]="tech" styleClass="stack-tag" />
+                <p-tag [value]="tech" />
               }
             </div>
 
-            <!-- Botón GitHub -->
             <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
               <p-button
                 label="Ver en GitHub"
                 icon="pi pi-github"
                 [outlined]="true"
                 severity="secondary"
-                styleClass="github-btn w-full justify-center"
+                class="github-btn w-full"
               />
             </a>
           </div>

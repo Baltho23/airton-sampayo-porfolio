@@ -1,6 +1,5 @@
 <section id="contact" class="py-20 bg-white">
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
     <div class="text-center mb-12">
       <span class="section-tag">Contacto</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Hablemos</h2>
@@ -10,7 +9,6 @@
       </p>
     </div>
 
-    <!-- Formulario -->
     @if (!submitted()) {
       <form (ngSubmit)="onSubmit()" class="contact-form">
         <div class="form-group">
@@ -58,7 +56,7 @@
           type="submit"
           label="Enviar mensaje"
           icon="pi pi-send"
-          styleClass="submit-btn w-full justify-center"
+          class="submit-btn"
         />
       </form>
     } @else {
@@ -69,22 +67,18 @@
       </div>
     }
 
-    <!-- Links de contacto directo -->
     <div class="flex flex-wrap justify-center gap-4 mt-10">
       <a [href]="'mailto:' + personal.email" class="direct-link">
-        <i class="pi pi-envelope"></i>
-        {{ personal.email }}
+        <i class="pi pi-envelope"></i>{{ personal.email }}
       </a>
       <a [href]="personal.linkedin" target="_blank" rel="noopener" class="direct-link">
-        <i class="pi pi-linkedin"></i>
-        LinkedIn
+        <i class="pi pi-linkedin"></i>LinkedIn
       </a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-primary py-6 text-center">
+<footer class="py-6 text-center" style="background: linear-gradient(135deg, #522566, #3a1a4a);">
   <p class="text-white/60 text-sm">
     © 2025 Airton Jairo Sampayo Solano — Bogotá, Colombia
   </p>

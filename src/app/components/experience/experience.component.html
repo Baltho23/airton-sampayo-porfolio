@@ -1,14 +1,12 @@
-<section id="experience" class="py-20 bg-slate-50">
+<section id="experience" class="py-20 bg-lightest">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
     <div class="text-center mb-14">
       <span class="section-tag">Trayectoria</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-3">Experiencia Laboral</h2>
       <div class="section-divider"></div>
     </div>
 
-    <!-- Timeline -->
-    <p-timeline [value]="experience" align="left" styleClass="experience-timeline">
+    <p-timeline [value]="experience" align="left" class="experience-timeline">
       <ng-template #marker let-item>
         <div class="timeline-marker" [ngClass]="'marker-' + item.severity">
           <i class="pi pi-briefcase"></i>
@@ -17,26 +15,19 @@
 
       <ng-template #content let-item>
         <div class="experience-card">
-          <!-- Header -->
           <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
             <div>
               <h3 class="text-lg font-bold text-primary">{{ item.role }}</h3>
-              <p class="text-accent font-semibold text-base">{{ item.company }}</p>
+              <p class="text-mid font-semibold text-base">{{ item.company }}</p>
             </div>
             <div class="flex flex-col items-end gap-1">
-              <p-tag
-                [value]="item.period"
-                [severity]="item.severity"
-                icon="pi pi-calendar"
-                styleClass="period-tag"
-              />
+              <p-tag [value]="item.period" [severity]="item.severity" icon="pi pi-calendar" />
               <span class="text-gray-400 text-xs flex items-center gap-1">
                 <i class="pi pi-map-marker text-xs"></i>{{ item.location }}
               </span>
             </div>
           </div>
 
-          <!-- Bullets -->
           <ul class="mt-3 flex flex-col gap-2">
             @for (bullet of item.bullets; track bullet) {
               <li class="flex gap-2 text-gray-600 text-sm leading-relaxed">

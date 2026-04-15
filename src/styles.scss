@@ -14,45 +14,44 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ─── Sobrescritura de tokens CSS de PrimeNG con nuestra paleta ─── */
+/* ─── Paleta ───────────────────────────────────────────────────────────── */
 :root {
-  --primary-color: #1e3a5f;
-  --primary-color-text: #ffffff;
-  --accent-color: #f97316;
+  --color-primary:  #522566;
+  --color-mid:      #7A3A8E;
+  --color-accent:   #AD74C3;
+  --color-soft:     #EADFF0;
+  --color-lightest: #F8EDFB;
+
+  /* PrimeNG tokens */
+  --primary-color:       #522566;
+  --primary-color-text:  #ffffff;
 
   /* Botones primarios */
-  --p-button-primary-background: #1e3a5f;
-  --p-button-primary-hover-background: #16304f;
-  --p-button-primary-border-color: #1e3a5f;
-  --p-button-primary-hover-border-color: #16304f;
-  --p-button-primary-color: #ffffff;
+  --p-button-primary-background:       #522566;
+  --p-button-primary-hover-background: #3f1a50;
+  --p-button-primary-border-color:     #522566;
+  --p-button-primary-hover-border-color: #3f1a50;
+  --p-button-primary-color:            #ffffff;
 
   /* Botones outlined */
-  --p-button-outlined-primary-color: #1e3a5f;
-  --p-button-outlined-primary-border-color: #1e3a5f;
-  --p-button-outlined-primary-hover-background: rgba(30, 58, 95, 0.08);
+  --p-button-outlined-primary-color:            #522566;
+  --p-button-outlined-primary-border-color:     #522566;
+  --p-button-outlined-primary-hover-background: rgba(82, 37, 102, 0.08);
 
   /* Inputs */
-  --p-inputtext-focus-border-color: #1e3a5f;
+  --p-inputtext-focus-border-color: #7A3A8E;
 
-  /* Smooth scroll */
   scroll-behavior: smooth;
 }
 
-/* ─── Estilos globales ─── */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
+  background: #ffffff;
 }
 
-/* Scroll suave nativo */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }

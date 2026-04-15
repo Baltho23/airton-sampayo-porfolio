@@ -2,8 +2,8 @@
   display: inline-block;
   padding: 0.3rem 1rem;
   border-radius: 9999px;
-  background: rgba(249, 115, 22, 0.12);
-  color: #f97316;
+  background: rgba(173, 116, 195, 0.15);
+  color: #7A3A8E;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -13,7 +13,7 @@
 .section-divider {
   width: 50px;
   height: 3px;
-  background: #f97316;
+  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
   border-radius: 2px;
   margin: 1rem auto 0;
 }
@@ -22,43 +22,38 @@
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
-  background: linear-gradient(135deg, #1e3a5f 0%, #16304f 100%);
+  background: linear-gradient(135deg, #522566 0%, #3a1a4a 100%);
   border-radius: 16px;
   padding: 1.75rem 2rem;
-  color: white;
-  box-shadow: 0 8px 32px rgba(30, 58, 95, 0.25);
-
-  h3 { color: white; }
-  p  { color: #f97316; }
-  span { color: rgba(255,255,255,0.6); }
+  box-shadow: 0 8px 32px rgba(82, 37, 102, 0.3);
 }
 
 .edu-icon-wrap {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: rgba(249, 115, 22, 0.2);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+  background: rgba(173, 116, 195, 0.2);
+  border: 1px solid rgba(173, 116, 195, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
   i {
-    color: #f97316;
+    color: #AD74C3;
     font-size: 1.5rem;
   }
 }
 
 .cert-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #F8EDFB;
+  border: 1px solid #EADFF0;
   border-radius: 12px;
   padding: 1rem 1.25rem;
   transition: box-shadow 0.2s, transform 0.2s;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 4px 16px rgba(82, 37, 102, 0.1);
     transform: translateY(-2px);
   }
 }
@@ -67,14 +62,14 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(30, 58, 95, 0.08);
+  background: rgba(82, 37, 102, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
   i {
-    color: #1e3a5f;
+    color: #522566;
     font-size: 0.9rem;
   }
 }

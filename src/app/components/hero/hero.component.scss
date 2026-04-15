@@ -2,11 +2,14 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #f97316;
+  background: linear-gradient(135deg, #AD74C3 0%, #7A3A8E 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25), 0 0 0 8px rgba(249, 115, 22, 0.1);
+  box-shadow:
+    0 0 0 4px rgba(173, 116, 195, 0.25),
+    0 0 0 10px rgba(173, 116, 195, 0.1),
+    0 16px 40px rgba(82, 37, 102, 0.5);
 
   span {
     color: white;
@@ -16,10 +19,14 @@
   }
 }
 
+.typewriter-line {
+  color: #EADFF0;
+}
+
 .typewriter-cursor {
   display: inline-block;
   animation: blink 0.75s step-end infinite;
-  color: #f97316;
+  color: #AD74C3;
   margin-left: 2px;
 }
 
@@ -34,76 +41,74 @@
   gap: 0.4rem;
   padding: 0.4rem 0.9rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(173, 116, 195, 0.15);
+  border: 1px solid rgba(173, 116, 195, 0.3);
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.85rem;
   text-decoration: none;
   transition: all 0.2s;
 
   &:hover {
-    background: rgba(249, 115, 22, 0.2);
-    border-color: rgba(249, 115, 22, 0.4);
-    color: #f97316;
+    background: rgba(173, 116, 195, 0.3);
+    border-color: rgba(173, 116, 195, 0.6);
+    color: #EADFF0;
   }
 
-  i {
-    font-size: 0.9rem;
-  }
+  i { font-size: 0.9rem; }
 }
 
 /* Blobs decorativos */
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
+  filter: blur(90px);
+  opacity: 0.2;
 }
 
 .blob-1 {
-  width: 500px;
-  height: 500px;
-  background: #f97316;
-  top: -100px;
-  right: -100px;
+  width: 550px;
+  height: 550px;
+  background: #AD74C3;
+  top: -120px;
+  right: -120px;
 }
 
 .blob-2 {
-  width: 400px;
-  height: 400px;
-  background: #3b82f6;
-  bottom: -50px;
-  left: -80px;
+  width: 450px;
+  height: 450px;
+  background: #7A3A8E;
+  bottom: -80px;
+  left: -100px;
 }
 
 .grid-bg {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Botones del hero — override de PrimeNG */
+/* Botones */
 :host ::ng-deep {
   .hero-btn-primary.p-button {
-    background: #f97316;
-    border-color: #f97316;
+    background: #AD74C3;
+    border-color: #AD74C3;
     color: white;
     font-weight: 600;
     padding: 0.65rem 1.5rem;
     border-radius: 8px;
 
     &:hover {
-      background: #ea6c0a;
-      border-color: #ea6c0a;
+      background: #9a5fb0;
+      border-color: #9a5fb0;
     }
   }
 
   .hero-btn-outlined.p-button {
     background: transparent;
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.45);
     color: white;
     font-weight: 600;
     padding: 0.65rem 1.5rem;
@@ -111,7 +116,7 @@
 
     &:hover {
       background: rgba(255, 255, 255, 0.08);
-      border-color: white;
+      border-color: rgba(255, 255, 255, 0.8);
     }
   }
 }

@@ -2,8 +2,8 @@
   display: inline-block;
   padding: 0.3rem 1rem;
   border-radius: 9999px;
-  background: rgba(249, 115, 22, 0.12);
-  color: #f97316;
+  background: rgba(173, 116, 195, 0.15);
+  color: #7A3A8E;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -13,14 +13,14 @@
 .section-divider {
   width: 50px;
   height: 3px;
-  background: #f97316;
+  background: linear-gradient(90deg, #7A3A8E, #AD74C3);
   border-radius: 2px;
   margin: 1rem auto 0;
 }
 
 .contact-form {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #F8EDFB;
+  border: 1px solid #EADFF0;
   border-radius: 16px;
   padding: 2rem;
   display: flex;
@@ -46,8 +46,8 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background: rgba(173, 116, 195, 0.08);
+  border: 1px solid #EADFF0;
   border-radius: 16px;
   text-align: center;
 }
@@ -56,19 +56,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #1e3a5f;
+  color: #522566;
   font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #EADFF0;
   transition: all 0.2s;
 
   &:hover {
-    background: rgba(30, 58, 95, 0.06);
-    border-color: #1e3a5f;
-    color: #f97316;
+    background: rgba(82, 37, 102, 0.06);
+    border-color: #AD74C3;
+    color: #7A3A8E;
   }
 }
 
@@ -76,18 +76,19 @@
   .p-inputtext,
   textarea.p-inputtextarea {
     border-radius: 8px;
-    border-color: #e2e8f0;
+    border-color: #EADFF0;
+    background: white;
     transition: border-color 0.2s, box-shadow 0.2s;
 
     &:focus {
-      border-color: #1e3a5f;
-      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.12);
+      border-color: #7A3A8E;
+      box-shadow: 0 0 0 3px rgba(122, 58, 142, 0.12);
     }
   }
 
-  .submit-btn.p-button {
-    background: #f97316;
-    border-color: #f97316;
+  .submit-btn .p-button {
+    background: #522566;
+    border-color: #522566;
     color: white;
     font-weight: 600;
     border-radius: 8px;
@@ -96,8 +97,8 @@
     justify-content: center;
 
     &:hover {
-      background: #ea6c0a;
-      border-color: #ea6c0a;
+      background: #3f1a50;
+      border-color: #3f1a50;
     }
   }
 }

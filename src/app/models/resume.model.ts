@@ -43,6 +43,11 @@ export interface Project {
   githubUrl: string;
 }
 
+export interface Language {
+  name: string;
+  level: string;
+}
+
 export interface ResumeData {
   personal: PersonalInfo;
   skills: SkillCategory[];
@@ -50,4 +55,5 @@ export interface ResumeData {
   education: Education;
   certifications: Certification[];
   projects: Project[];
+  languages: Language[];
 }

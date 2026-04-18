@@ -3,14 +3,14 @@ import { ResumeData } from '../models/resume.model';
 export const RESUME_DATA: ResumeData = {
   personal: {
     name: 'Airton Jairo Sampayo Solano',
-    role: 'Desarrollador Full-Stack',
-    location: 'Bogotá, Cundinamarca',
+    role: 'Desarrollador de Software Full Stack',
+    location: 'Bogotá, Colombia',
     email: 'aldairton23@gmail.com',
     linkedin: 'https://www.linkedin.com/in/airton-sampayo/',
-    phone: '+57 324 7006090',
+    phone: '+57 324 700 6090',
     initials: 'AJS',
     summary:
-      'Desarrollador de software con 2 años de experiencia en el desarrollo de aplicaciones web, especializado en tecnologías frontend y backend como Angular, React, Spring Boot, Laravel, PHP, PostgreSQL y MySQL. Con experiencia en consumo e integración de APIs, desarrollo de interfaces modernas y gestión de bases de datos relacionales. Manejo herramientas de control de versiones como Git y pruebas automatizadas con Cypress. Me destaco por mi capacidad analítica, resolución de problemas y trabajo colaborativo en equipos multidisciplinarios.',
+      'Desarrollador de Software con más de 2 años de experiencia construyendo aplicaciones web modernas y escalables. Especializado en Angular y React para frontend, y Spring Boot, Laravel y PHP para backend, con sólido manejo de bases de datos relacionales (PostgreSQL, MySQL). Experiencia en integración de APIs RESTful, pruebas automatizadas con Cypress y metodologías ágiles. Orientado a la calidad del código, la resolución de problemas y la entrega continua de valor en equipos multidisciplinarios.',
   },
 
   skills: [
@@ -27,52 +27,60 @@ export const RESUME_DATA: ResumeData = {
     {
       label: 'Bases de datos',
       icon: 'pi pi-database',
-      skills: ['PostgreSQL', 'MySQL'],
+      skills: ['PostgreSQL', 'MySQL', 'Diseño de esquemas relacionales'],
     },
     {
       label: 'Herramientas',
       icon: 'pi pi-wrench',
-      skills: ['Git', 'Cypress', 'REST APIs', 'Metodologías ágiles'],
+      skills: ['Git', 'GitHub', 'Cypress', 'Postman', 'APIs RESTful'],
+    },
+    {
+      label: 'Metodologías',
+      icon: 'pi pi-users',
+      skills: ['Scrum', 'Desarrollo ágil', 'Resolución de incidencias', 'Documentación técnica'],
     },
   ],
 
   experience: [
     {
       company: 'VmlHolding',
-      role: 'Desarrollador Full-Stack',
-      period: 'Noviembre 2024 – Actualidad',
-      location: 'Bogotá',
+      role: 'Desarrollador Full Stack',
+      period: 'Nov 2025 – Actualidad',
+      location: 'Bogotá, Colombia',
       severity: 'success',
       bullets: [
-        'Desarrollo y mantenimiento de aplicaciones web con React, Laravel, PHP y MySQL.',
-        'Implementación de requerimientos funcionales garantizando soluciones escalables.',
-        'Resolución de incidencias mediante tickets, diagnóstico y mejoras correctivas/preventivas.',
-        'Gestión y optimización de bases de datos relacionales asegurando integridad y rendimiento.',
+        'Desarrollo y mantenimiento de aplicaciones web con React, Laravel, PHP y MySQL, implementando requerimientos funcionales del cliente con soluciones eficientes y escalables.',
+        'Liderazgo en la creación y mantenimiento de APIs RESTful con endpoints robustos y documentados para integración entre servicios frontend y backend.',
+        'Gestión y optimización de bases de datos relacionales, garantizando integridad, rendimiento y escalabilidad.',
+        'Diagnóstico y resolución de incidencias mediante sistema de tickets, aplicando mejoras correctivas y preventivas.',
+        'Trabajo colaborativo con equipos multidisciplinarios para entrega continua de funcionalidades y mantenimiento evolutivo de sistemas.',
       ],
     },
     {
       company: 'GenteMovil',
       role: 'Desarrollador Front-End',
-      period: 'Julio 2023 – Octubre 2024',
-      location: 'Bogotá',
+      period: 'Jul 2024 – Ago 2025',
+      location: 'Bogotá, Colombia',
       severity: 'info',
       bullets: [
-        'Desarrollo de nuevas funcionalidades y módulos en Angular adaptados a cada cliente.',
-        'Consumo de endpoints e integración con servicios backend en Spring Boot.',
-        'Análisis y resolución de problemas críticos en lógica de negocio.',
-        'Implementación y mantenimiento de pruebas automatizadas con Cypress.',
+        'Diseño e implementación de nuevas funcionalidades y módulos en Angular para múltiples clientes y ambientes de despliegue.',
+        'Integración con servicios backend en Spring Boot mediante consumo de APIs REST, asegurando comunicación eficiente entre capas.',
+        'Análisis y resolución de problemas críticos en la lógica de negocio, optimizando la experiencia del usuario y la integridad de datos.',
+        'Implementación y mantenimiento de pruebas automatizadas E2E con Cypress, mejorando la calidad y estabilidad del sistema.',
+        'Participación en metodología Scrum para mejorar coordinación y eficiencia del equipo de desarrollo.',
       ],
     },
     {
       company: 'Kodland',
       role: 'Maestro de Programación',
-      period: 'Mayo 2023 – Actualidad',
-      location: 'Bogotá',
+      period: 'May 2023 – Actualidad',
+      location: 'Bogotá, Colombia',
       severity: 'warn',
       bullets: [
-        'Diseño e impartición de clases de programación para niños menores de 13 años.',
-        'Uso de Scratch, Roblox Studio, Minecraft Education y Python.',
-        'Fomento de creatividad, pensamiento crítico y resolución de problemas.',
+        'Diseño e impartición de clases de programación para niños menores de 17 años con Scratch, Roblox Studio, Minecraft Education y Python.',
+        'Transformación de conceptos técnicos en proyectos prácticos y motivadores, fomentando creatividad y pensamiento computacional.',
+        'Seguimiento personalizado con estrategias diferenciadas por nivel de habilidad del estudiante.',
+        'Colaboración con educadores y familias para mantener un entorno inclusivo, seguro y motivador.',
       ],
     },
   ],
@@ -86,12 +94,12 @@ export const RESUME_DATA: ResumeData = {
   certifications: [
     {
       platform: 'Udemy',
-      name: 'Formación Front-End Angular',
+      name: 'Formación Front-End — Angular',
       date: 'Octubre 2024',
     },
     {
       platform: 'Alura',
-      name: 'Formación Front-End React',
+      name: 'Formación Front-End — React',
       date: 'Octubre 2022',
     },
   ],
@@ -139,5 +147,10 @@ export const RESUME_DATA: ResumeData = {
       stack: ['Angular', 'PrimeNG', 'Tailwind', 'TypeScript'],
       githubUrl: 'https://github.com/Baltho23/airton-sampayo-porfolio',
     },
+  ],
+
+  languages: [
+    { name: 'Español', level: 'Nativo' },
+    { name: 'Inglés', level: 'Básico (B1)' },
   ],
 };

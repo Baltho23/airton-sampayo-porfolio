@@ -39,19 +39,21 @@
   flex-shrink: 0;
 }
 
-.brand-dot {
+.brand-avatar {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #6366F1, #818CF8);
-  color: white;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   flex-shrink: 0;
+  border: 1.5px solid rgba(99,102,241,0.5);
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.15);
+}
+
+.brand-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .brand-text {

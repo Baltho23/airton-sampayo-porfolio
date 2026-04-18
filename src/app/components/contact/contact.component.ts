@@ -23,13 +23,17 @@ export class ContactComponent {
 
   onSubmit(): void {
     if (this.name && this.email && this.message) {
+      const text = `Hola Airton, te escribo desde tu portafolio 👋\n\n*Nombre:* ${this.name}\n*Email:* ${this.email}\n\n*Mensaje:*\n${this.message}`;
+      const whatsappUrl = `https://wa.me/573247006090?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
       this.submitted.set(true);
       setTimeout(() => {
         this.submitted.set(false);
         this.name = '';
         this.email = '';
         this.message = '';
-      }, 3000);
+      }, 4000);
     }
   }
 }

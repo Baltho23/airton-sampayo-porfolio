@@ -174,7 +174,44 @@
   50%       { transform: translateX(-50%) translateY(7px); }
 }
 
+/* ── Floating tech icons ── */
+.tech-float {
+  position: absolute;
+  opacity: 0.18;
+  pointer-events: none;
+  animation: tech-float 6s ease-in-out infinite;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+@keyframes tech-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(3deg); }
+  66%       { transform: translateY(6px) rotate(-2deg); }
+}
+
+/* Positions & sizes for each icon */
+.tf-1  { width: 52px; height: 52px; top: 10%; left: 6%;   animation-delay: 0s;    animation-duration: 7s; }
+.tf-2  { width: 58px; height: 58px; top: 15%; right: 8%;  animation-delay: -1.2s; animation-duration: 6.5s; }
+.tf-3  { width: 48px; height: 48px; top: 65%; left: 4%;   animation-delay: -2.5s; animation-duration: 8s; }
+.tf-4  { width: 50px; height: 50px; top: 55%; right: 6%;  animation-delay: -0.8s; animation-duration: 7.5s; }
+.tf-5  { width: 46px; height: 46px; top: 80%; left: 18%;  animation-delay: -3.1s; animation-duration: 6s; }
+.tf-6  { width: 44px; height: 44px; top: 22%; left: 20%;  animation-delay: -1.8s; animation-duration: 9s; }
+.tf-7  { width: 42px; height: 42px; top: 72%; right: 15%; animation-delay: -4s;   animation-duration: 7s; }
+.tf-8  { width: 56px; height: 56px; top: 35%; left: 3%;   animation-delay: -2s;   animation-duration: 8.5s; }
+.tf-9  { width: 48px; height: 48px; top: 44%; right: 3%;  animation-delay: -0.5s; animation-duration: 7.2s; }
+.tf-10 { width: 40px; height: 40px; top: 85%; right: 25%; animation-delay: -3.5s; animation-duration: 6.8s; }
+.tf-11 { width: 52px; height: 52px; top: 8%;  right: 22%; animation-delay: -1.5s; animation-duration: 7.8s; }
+.tf-12 { width: 44px; height: 44px; top: 60%; left: 25%;  animation-delay: -2.8s; animation-duration: 6.3s; }
+
 @media (max-width: 640px) {
   .chip span { display: none; }
   .chip { padding: 9px; border-radius: 50%; width: 38px; height: 38px; justify-content: center; }
+  .tech-float { opacity: 0.09; }
+  .tf-6, .tf-7, .tf-10, .tf-11, .tf-12 { display: none; }
 }

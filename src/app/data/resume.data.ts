@@ -98,25 +98,46 @@ export const RESUME_DATA: ResumeData = {
 
   projects: [
     {
-      name: 'Factum POS',
+      name: 'Factum — Frontend',
       description:
-        'Sistema completo de Punto de Venta con gestión de inventario, sesiones de caja, devoluciones y reportes. Autenticación JWT con roles ADMIN/USER.',
-      stack: ['Angular', 'Spring Boot', 'PostgreSQL', 'PrimeNG', 'Tailwind'],
-      githubUrl: 'https://github.com/airton-sampayo',
+        'Interfaz de un sistema POS completo: inventario, sesiones de caja, devoluciones, reportes y roles ADMIN/USER. Construido con Angular standalone y PrimeNG.',
+      stack: ['Angular', 'PrimeNG', 'Tailwind', 'TypeScript'],
+      githubUrl: 'https://github.com/JoseQuinteroTC/Factum-Front',
     },
     {
-      name: 'E-Commerce Dashboard',
+      name: 'Factum — Backend',
       description:
-        'Panel administrativo para tienda en línea con gestión de productos, pedidos y clientes. Incluye gráficas de ventas en tiempo real.',
-      stack: ['React', 'Laravel', 'MySQL', 'Chart.js'],
-      githubUrl: 'https://github.com/airton-sampayo',
+        'API REST del sistema POS con autenticación JWT, gestión de stock, sesiones de caja, compras y movimientos. Documentado con Swagger.',
+      stack: ['Spring Boot', 'Java', 'PostgreSQL', 'JWT'],
+      githubUrl: 'https://github.com/JoseQuinteroTC/Factum-Back',
     },
     {
-      name: 'API RESTful de Gestión Escolar',
+      name: 'Facturador',
       description:
-        'Backend para plataforma educativa con módulos de cursos, estudiantes, calificaciones y notificaciones. Pruebas automatizadas con Cypress.',
-      stack: ['Spring Boot', 'PostgreSQL', 'JWT', 'Cypress'],
-      githubUrl: 'https://github.com/airton-sampayo',
+        'Sistema de facturación electrónica para gestión de clientes, productos y generación de facturas.',
+      stack: ['PHP', 'Laravel', 'MySQL'],
+      githubUrl: 'https://github.com/Baltho23/Facturador',
+    },
+    {
+      name: 'Biblioteca',
+      description:
+        'Aplicación de gestión de biblioteca con módulo de préstamos, inventario de libros y control de usuarios.',
+      stack: ['Java', 'Spring Boot', 'MySQL'],
+      githubUrl: 'https://github.com/Baltho23/Biblioteca',
+    },
+    {
+      name: 'Space Survival',
+      description:
+        'Videojuego de supervivencia espacial desarrollado como proyecto personal para explorar mecánicas de juego y lógica de colisiones.',
+      stack: ['JavaScript', 'HTML5', 'CSS3'],
+      githubUrl: 'https://github.com/Baltho23/Space_Survival',
+    },
+    {
+      name: 'Portafolio',
+      description:
+        'Este mismo portafolio — SPA construida con Angular 20 standalone, PrimeNG y Tailwind CSS. Diseño profesional con animaciones y formulario WhatsApp.',
+      stack: ['Angular', 'PrimeNG', 'Tailwind', 'TypeScript'],
+      githubUrl: 'https://github.com/Baltho23/airton-sampayo-porfolio',
     },
   ],
 };

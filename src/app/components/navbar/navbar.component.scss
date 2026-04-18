@@ -1,27 +1,21 @@
-/* ── Host ── */
-:host {
-  display: block;
-}
+:host { display: block; }
 
-/* ── Header ── */
 .navbar-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 50;
-  background: rgba(82, 37, 102, 0.97);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(173, 116, 195, 0.2);
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.12);
   transition: box-shadow 0.3s;
 
   &.elevated {
-    box-shadow: 0 4px 24px rgba(42, 16, 56, 0.45);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+    border-bottom-color: rgba(99, 102, 241, 0.2);
   }
 }
 
-/* ── Contenedor ── */
 .navbar-container {
   max-width: 1152px;
   margin: 0 auto;
@@ -48,11 +42,12 @@
 .brand-dot {
   width: 34px;
   height: 34px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #AD74C3, #7A3A8E);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366F1, #818CF8);
   color: white;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
+  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +55,7 @@
 }
 
 .brand-text {
-  color: white;
+  color: rgba(255,255,255,0.9);
   font-size: 0.9rem;
   font-weight: 600;
   white-space: nowrap;
@@ -70,7 +65,7 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   flex: 1;
   justify-content: center;
 }
@@ -83,21 +78,18 @@
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255,255,255,0.6);
   padding: 8px 14px;
   border-radius: 8px;
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
 
-  &:hover {
-    color: white;
-    background: rgba(173, 116, 195, 0.12);
-  }
+  &:hover { color: white; background: rgba(99,102,241,0.12); }
 
   &--active {
     color: white;
     font-weight: 600;
-    background: rgba(173, 116, 195, 0.15);
+    background: rgba(99,102,241,0.15);
   }
 }
 
@@ -109,7 +101,7 @@
   width: 55%;
   height: 2px;
   border-radius: 1px;
-  background: #AD74C3;
+  background: #818CF8;
   display: block;
 }
 
@@ -120,8 +112,8 @@
   gap: 6px;
   padding: 7px 14px;
   border-radius: 8px;
-  border: 1px solid rgba(173, 116, 195, 0.5);
-  color: #EADFF0;
+  border: 1px solid rgba(99,102,241,0.4);
+  color: #818CF8;
   font-size: 0.8rem;
   font-weight: 600;
   text-decoration: none;
@@ -132,8 +124,8 @@
   i { font-size: 0.72rem; }
 
   &:hover {
-    background: rgba(173, 116, 195, 0.18);
-    border-color: #AD74C3;
+    background: rgba(99,102,241,0.15);
+    border-color: #6366F1;
     color: white;
   }
 }
@@ -149,18 +141,16 @@
   padding: 6px;
   border-radius: 6px;
   flex-shrink: 0;
-
-  &:hover { background: rgba(173, 116, 195, 0.15); }
+  &:hover { background: rgba(99,102,241,0.15); }
 }
 
 .bar {
   display: block;
   width: 22px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.8);
   border-radius: 2px;
   transition: transform 0.25s, opacity 0.25s;
-
   &--open-1 { transform: translateY(7px) rotate(45deg); }
   &--open-2 { opacity: 0; }
   &--open-3 { transform: translateY(-7px) rotate(-45deg); }
@@ -170,13 +160,12 @@
 .mobile-menu {
   overflow: hidden;
   max-height: 0;
-  background: rgba(58, 26, 74, 0.98);
-  border-top: 1px solid rgba(173, 116, 195, 0.1);
+  background: rgba(15,23,42,0.98);
+  border-top: 1px solid rgba(99,102,241,0.1);
   transition: max-height 0.3s ease;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
-
   &--open { max-height: 400px; padding: 8px 1rem 14px; }
 }
 
@@ -191,16 +180,17 @@
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255,255,255,0.65);
   transition: all 0.2s;
-
-  &:hover { background: rgba(173, 116, 195, 0.12); color: white; }
-  &--active { color: #EADFF0; font-weight: 600; background: rgba(173, 116, 195, 0.1); }
+  &:hover  { background: rgba(99,102,241,0.12); color: white; }
+  &--active { color: #818CF8; font-weight: 600; background: rgba(99,102,241,0.1); }
 }
 
 .mobile-cv {
   margin-top: 8px;
-  border-color: rgba(173, 116, 195, 0.35);
+  border-color: rgba(99,102,241,0.3);
+  color: #818CF8;
+  &:hover { background: rgba(99,102,241,0.12); border-color: #6366F1; color: white; }
 }
 
 /* ── Responsive ── */

@@ -9,27 +9,26 @@
   padding: 0 1.5rem;
 }
 
-/* ── Header ── */
 .section-header {
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
 .section-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #AD74C3;
+  color: #6366F1;
   margin: 0 0 0.6rem;
 }
 
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 800;
-  color: #522566;
+  color: #0F172A;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 /* ── Stats ── */
@@ -38,30 +37,30 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-bottom: 4rem;
-
   @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #522566 0%, #3a1a4a 100%);
+  background: #0F172A;
   border-radius: 16px;
   padding: 1.5rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  border: 1px solid rgba(99,102,241,0.15);
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(82,37,102,0.25);
+    box-shadow: 0 12px 32px rgba(99,102,241,0.2);
   }
 }
 
 .stat-number {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #ffffff, #AD74C3);
+  background: linear-gradient(135deg, #ffffff, #818CF8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -69,8 +68,8 @@
 }
 
 .stat-label {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
   font-weight: 500;
 }
 
@@ -78,68 +77,58 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: 4rem;
   align-items: start;
-
   @media (max-width: 768px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
 /* ── Bio ── */
 .bio-text {
   font-size: 1rem;
-  line-height: 1.8;
-  color: #4b5563;
+  line-height: 1.85;
+  color: #475569;
   margin: 0 0 2rem;
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+.contact-list { display: flex; flex-direction: column; gap: 0.7rem; }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.9rem;
-  color: #374151;
+  font-size: 0.875rem;
+  color: #334155;
   text-decoration: none;
   transition: color 0.2s;
-
-  &:hover { color: #522566; }
+  &:hover { color: #6366F1; }
 }
 
 .contact-icon {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: #F8EDFB;
-  border: 1px solid #EADFF0;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-
-  i { color: #7A3A8E; font-size: 0.85rem; }
+  i { color: #6366F1; font-size: 0.8rem; }
 }
 
 /* ── Skills ── */
-.skills-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
+.skills-col { display: flex; flex-direction: column; gap: 1rem; }
 
 .skill-block {
-  background: #F8EDFB;
-  border: 1px solid #EADFF0;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
-  padding: 1.1rem 1.25rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 1rem 1.25rem;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
 
   &:hover {
-    box-shadow: 0 6px 20px rgba(82,37,102,0.1);
+    box-shadow: 0 6px 24px rgba(99,102,241,0.1);
+    border-color: rgba(99,102,241,0.2);
     transform: translateY(-1px);
   }
 }
@@ -150,33 +139,28 @@
   gap: 0.6rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #7A3A8E;
-
-  i { font-size: 0.85rem; }
+  color: #6366F1;
+  i { font-size: 0.8rem; }
 }
 
-.chips-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
+.chips-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .skill-chip {
   padding: 4px 12px;
   border-radius: 9999px;
   background: white;
-  border: 1px solid #EADFF0;
-  color: #522566;
-  font-size: 0.8rem;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-size: 0.78rem;
   font-weight: 600;
-  transition: all 0.2s;
+  transition: all 0.18s;
 
   &:hover {
-    background: #522566;
+    background: #6366F1;
     color: white;
-    border-color: #522566;
+    border-color: #6366F1;
   }
 }

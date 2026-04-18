@@ -9,69 +9,64 @@
   padding: 0 1.5rem;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
+.section-header { text-align: center; margin-bottom: 3.5rem; }
 
 .section-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #AD74C3;
+  color: #6366F1;
   margin: 0 0 0.6rem;
 }
 
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 800;
-  color: #522566;
+  color: #0F172A;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
-/* ── Grid ── */
 .edu-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 2.5rem;
   align-items: start;
-
   @media (max-width: 768px) { grid-template-columns: 1fr; }
 }
 
 /* ── Universidad ── */
 .uni-card {
-  background: linear-gradient(145deg, #522566 0%, #3a1a4a 100%);
+  background: #0F172A;
   border-radius: 20px;
   padding: 2.5rem 2rem;
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  box-shadow: 0 12px 40px rgba(82,37,102,0.3);
+  border: 1px solid rgba(99,102,241,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
 }
 
 .uni-icon {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: rgba(173,116,195,0.2);
-  border: 1px solid rgba(173,116,195,0.3);
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-
-  i { color: #AD74C3; font-size: 1.4rem; }
+  i { color: #818CF8; font-size: 1.4rem; }
 }
 
 .uni-tag {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.35);
   margin: 0 0 6px;
 }
 
@@ -83,9 +78,9 @@
 }
 
 .uni-inst {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #AD74C3;
+  color: #818CF8;
   margin: 0 0 10px;
 }
 
@@ -93,25 +88,20 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.45);
-
-  i { font-size: 0.7rem; }
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.35);
+  i { font-size: 0.68rem; }
 }
 
 /* ── Certs ── */
-.certs-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+.certs-col { display: flex; flex-direction: column; gap: 1rem; }
 
 .certs-heading {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #AD74C3;
+  color: #6366F1;
   margin: 0 0 0.25rem;
 }
 
@@ -119,15 +109,16 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #F8EDFB;
-  border: 1px solid #EADFF0;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   padding: 1.1rem 1.25rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 
   &:hover {
     transform: translateX(4px);
-    box-shadow: 0 6px 20px rgba(82,37,102,0.1);
+    box-shadow: 0 6px 20px rgba(99,102,241,0.1);
+    border-color: rgba(99,102,241,0.2);
   }
 }
 
@@ -136,29 +127,21 @@
   height: 40px;
   border-radius: 10px;
   background: white;
-  border: 1px solid #EADFF0;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-
-  i { color: #7A3A8E; font-size: 1rem; }
+  i { color: #6366F1; font-size: 1rem; }
 }
 
-.cert-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.cert-info { display: flex; flex-direction: column; gap: 2px; }
 
 .cert-name {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #0F172A;
   margin: 0;
 }
 
-.cert-meta {
-  font-size: 0.78rem;
-  color: #9ca3af;
-}
+.cert-meta { font-size: 0.76rem; color: #94A3B8; }

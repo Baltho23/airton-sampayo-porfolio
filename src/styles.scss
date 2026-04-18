@@ -1,47 +1,27 @@
-/* Orden de capas: Tailwind base < PrimeNG < Tailwind utilities */
 @layer tailwind-base, primeng, tailwind-utilities;
-
-@layer tailwind-base {
-  @tailwind base;
-}
-
+@layer tailwind-base { @tailwind base; }
 @tailwind components;
+@layer tailwind-utilities { @tailwind utilities; }
 
-@layer tailwind-utilities {
-  @tailwind utilities;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap');
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-/* ─── Paleta ───────────────────────────────────────────────────────────── */
 :root {
-  --color-primary:  #522566;
-  --color-mid:      #7A3A8E;
-  --color-accent:   #AD74C3;
-  --color-soft:     #EADFF0;
-  --color-lightest: #F8EDFB;
+  --color-ink:     #0F172A;
+  --color-surface: #1E293B;
+  --color-indigo:  #6366F1;
+  --color-violet:  #818CF8;
+  --color-mist:    #E0E7FF;
+  --color-snow:    #F8FAFC;
+  --color-muted:   #64748B;
 
   /* PrimeNG tokens */
-  --primary-color:       #522566;
-  --primary-color-text:  #ffffff;
-
-  /* Botones primarios */
-  --p-button-primary-background:       #522566;
-  --p-button-primary-hover-background: #3f1a50;
-  --p-button-primary-border-color:     #522566;
-  --p-button-primary-hover-border-color: #3f1a50;
-  --p-button-primary-color:            #ffffff;
-
-  /* Botones outlined */
-  --p-button-outlined-primary-color:            #522566;
-  --p-button-outlined-primary-border-color:     #522566;
-  --p-button-outlined-primary-hover-background: rgba(82, 37, 102, 0.08);
-
-  /* Inputs */
-  --p-inputtext-focus-border-color: #7A3A8E;
-
-  scroll-behavior: smooth;
+  --primary-color:                          #6366F1;
+  --primary-color-text:                     #ffffff;
+  --p-button-primary-background:            #6366F1;
+  --p-button-primary-hover-background:      #4F46E5;
+  --p-button-primary-border-color:          #6366F1;
+  --p-button-primary-hover-border-color:    #4F46E5;
+  --p-inputtext-focus-border-color:         #6366F1;
 }
 
 * { box-sizing: border-box; }
@@ -52,6 +32,8 @@ html, body {
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
   background: #ffffff;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
 }
 
 html { scroll-behavior: smooth; }

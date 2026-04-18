@@ -1,5 +1,5 @@
 .contact-section {
-  background: #F8EDFB;
+  background: #F8FAFC;
   padding: 6rem 0;
 }
 
@@ -9,51 +9,44 @@
   padding: 0 1.5rem;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
+.section-header { text-align: center; margin-bottom: 3.5rem; }
 
 .section-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #AD74C3;
+  color: #6366F1;
   margin: 0 0 0.6rem;
 }
 
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 800;
-  color: #522566;
+  color: #0F172A;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
-/* ── Grid ── */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 2rem;
   align-items: start;
-
   @media (max-width: 768px) { grid-template-columns: 1fr; }
 }
 
 /* ── Panel izquierdo ── */
-.contact-panel {
-  position: sticky;
-  top: 80px;
-}
+.contact-panel { position: sticky; top: 80px; }
 
 .panel-inner {
-  background: linear-gradient(145deg, #522566 0%, #3a1a4a 100%);
+  background: #0F172A;
   border-radius: 20px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border: 1px solid rgba(99,102,241,0.15);
 }
 
 .panel-heading {
@@ -61,20 +54,17 @@
   font-weight: 800;
   color: white;
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 .panel-sub {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.7;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
   margin: 0;
 }
 
-.panel-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+.panel-links { display: flex; flex-direction: column; gap: 1rem; }
 
 .panel-link {
   display: flex;
@@ -82,9 +72,7 @@
   gap: 0.9rem;
   text-decoration: none;
   transition: opacity 0.2s;
-
   &:hover { opacity: 0.8; }
-
   div { display: flex; flex-direction: column; gap: 1px; }
 }
 
@@ -92,27 +80,26 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(173,116,195,0.2);
-  border: 1px solid rgba(173,116,195,0.3);
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-
-  i { color: #AD74C3; font-size: 0.9rem; }
+  i { color: #818CF8; font-size: 0.9rem; }
 }
 
 .link-label {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .link-value {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   font-weight: 500;
 }
 
@@ -123,20 +110,18 @@
   gap: 8px;
   padding: 0.75rem;
   border-radius: 10px;
-  border: 1px solid rgba(173,116,195,0.4);
-  color: #EADFF0;
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #818CF8;
   font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
-
+  i { font-size: 0.8rem; }
   &:hover {
-    background: rgba(173,116,195,0.15);
-    border-color: #AD74C3;
+    background: rgba(99,102,241,0.12);
+    border-color: #6366F1;
     color: white;
   }
-
-  i { font-size: 0.8rem; }
 }
 
 /* ── Formulario ── */
@@ -144,25 +129,17 @@
   background: white;
   border-radius: 20px;
   padding: 2rem;
-  border: 1px solid #EADFF0;
+  border: 1px solid #E2E8F0;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 
 .form-label {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #374151;
+  color: #334155;
   letter-spacing: 0.02em;
 }
 
@@ -170,16 +147,16 @@
   .form-input.p-inputtext,
   textarea.form-input {
     border-radius: 10px;
-    border: 1.5px solid #EADFF0;
+    border: 1.5px solid #E2E8F0;
     padding: 0.65rem 0.9rem;
     font-family: inherit;
     font-size: 0.9rem;
     width: 100%;
+    color: #0F172A;
     transition: border-color 0.2s, box-shadow 0.2s;
-
     &:focus {
-      border-color: #7A3A8E;
-      box-shadow: 0 0 0 3px rgba(122,58,142,0.1);
+      border-color: #6366F1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
       outline: none;
     }
   }
@@ -193,19 +170,18 @@
   padding: 0.8rem;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(135deg, #522566, #7A3A8E);
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
   color: white;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
   font-family: inherit;
-
   &:hover {
-    opacity: 0.88;
+    opacity: 0.92;
     transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(99,102,241,0.35);
   }
-
   i { font-size: 0.85rem; }
 }
 
@@ -217,32 +193,26 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-
-  h3 { font-size: 1.2rem; font-weight: 700; color: #522566; margin: 0; }
-  p  { color: #6b7280; font-size: 0.9rem; margin: 0; }
+  h3 { font-size: 1.2rem; font-weight: 700; color: #0F172A; margin: 0; }
+  p  { color: #64748B; font-size: 0.9rem; margin: 0; }
 }
 
 .success-icon {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #522566, #AD74C3);
+  background: linear-gradient(135deg, #4F46E5, #818CF8);
   display: flex;
   align-items: center;
   justify-content: center;
-
   i { color: white; font-size: 1.5rem; }
 }
 
 /* ── Footer ── */
 .site-footer {
-  background: linear-gradient(135deg, #2a1038, #522566);
+  background: #0F172A;
   padding: 1.5rem;
   text-align: center;
-
-  p {
-    color: rgba(255,255,255,0.45);
-    font-size: 0.8rem;
-    margin: 0;
-  }
+  border-top: 1px solid rgba(99,102,241,0.1);
+  p { color: rgba(255,255,255,0.3); font-size: 0.78rem; margin: 0; }
 }

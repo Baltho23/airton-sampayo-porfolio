@@ -1,4 +1,3 @@
-/* ── Sección ── */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -7,32 +6,30 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(145deg, #2a1038 0%, #3a1a4a 40%, #522566 100%);
+  background: #0F172A;
 }
 
-/* ── Fondo decorativo ── */
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
 
 .grid-overlay {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(173,116,195,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(173,116,195,0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(99,102,241,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.07) 1px, transparent 1px);
+  background-size: 52px 52px;
 }
 
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.18;
+  filter: blur(110px);
+  opacity: 0.22;
 }
-.b1 { width: 600px; height: 600px; background: #AD74C3; top: -150px; right: -150px; }
-.b2 { width: 400px; height: 400px; background: #7A3A8E; bottom: -80px; left: -100px; }
-.b3 { width: 250px; height: 250px; background: #EADFF0; top: 40%; left: 30%; opacity: 0.06; }
+.b1 { width: 600px; height: 600px; background: #6366F1; top: -180px; right: -120px; }
+.b2 { width: 450px; height: 450px; background: #818CF8; bottom: -100px; left: -120px; opacity: 0.16; }
+.b3 { width: 300px; height: 300px; background: #4F46E5; top: 35%; left: 25%; opacity: 0.1; }
 
-/* ── Contenido ── */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -43,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 /* ── Badge ── */
@@ -51,11 +48,11 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 9999px;
-  border: 1px solid rgba(173,116,195,0.35);
-  background: rgba(173,116,195,0.1);
-  color: #EADFF0;
+  border: 1px solid rgba(99,102,241,0.35);
+  background: rgba(99,102,241,0.1);
+  color: #818CF8;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -65,7 +62,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4ade80;
+  background: #4ADE80;
   box-shadow: 0 0 0 3px rgba(74,222,128,0.25);
   animation: pulse-dot 2s ease-in-out infinite;
   flex-shrink: 0;
@@ -73,17 +70,17 @@
 
 @keyframes pulse-dot {
   0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.25); }
-  50%       { box-shadow: 0 0 0 6px rgba(74,222,128,0.1);  }
+  50%       { box-shadow: 0 0 0 7px rgba(74,222,128,0.08); }
 }
 
 /* ── Título ── */
 .hero-title {
   margin: 0;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 0%, #EADFF0 50%, #AD74C3 100%);
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #E0E7FF 45%, #818CF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,12 +97,11 @@
 .typewriter-text {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #EADFF0;
-  opacity: 0.85;
+  color: rgba(255,255,255,0.55);
 }
 
 .cursor {
-  color: #AD74C3;
+  color: #6366F1;
   font-weight: 300;
   animation: blink 0.75s step-end infinite;
   margin-left: 1px;
@@ -116,7 +112,7 @@
   50%       { opacity: 0; }
 }
 
-/* ── Chips de contacto ── */
+/* ── Chips ── */
 .contact-row {
   display: flex;
   flex-wrap: wrap;
@@ -128,37 +124,36 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 7px 14px;
+  padding: 8px 16px;
   border-radius: 9999px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(173,116,195,0.28);
-  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
   font-size: 0.82rem;
   text-decoration: none;
   transition: all 0.2s;
-  backdrop-filter: blur(4px);
 
-  i { font-size: 0.78rem; color: #AD74C3; }
+  i { font-size: 0.78rem; color: #818CF8; }
 
   &:hover {
-    background: rgba(173,116,195,0.18);
-    border-color: rgba(173,116,195,0.55);
+    background: rgba(99,102,241,0.15);
+    border-color: rgba(99,102,241,0.4);
     color: white;
   }
 }
 
-/* ── Scroll button ── */
+/* ── Scroll ── */
 .scroll-btn {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   background: none;
-  border: 1px solid rgba(173,116,195,0.3);
+  border: 1px solid rgba(255,255,255,0.12);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.35);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -168,18 +163,18 @@
   animation: float 2.5s ease-in-out infinite;
 
   &:hover {
-    border-color: #AD74C3;
-    color: #AD74C3;
-    background: rgba(173,116,195,0.08);
+    border-color: #6366F1;
+    color: #818CF8;
+    background: rgba(99,102,241,0.1);
   }
 }
 
 @keyframes float {
   0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(6px); }
+  50%       { transform: translateX(-50%) translateY(7px); }
 }
 
 @media (max-width: 640px) {
   .chip span { display: none; }
-  .chip { padding: 8px 10px; border-radius: 50%; width: 38px; height: 38px; justify-content: center; }
+  .chip { padding: 9px; border-radius: 50%; width: 38px; height: 38px; justify-content: center; }
 }
